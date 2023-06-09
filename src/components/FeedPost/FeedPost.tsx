@@ -9,6 +9,7 @@ import styles from './styles';
 import {IPost} from '../../types/models';
 import {useState} from 'react';
 import DoublePressable from '../DoublePressable';
+import Carousel from '../Carousel';
 
 interface IFeedPost {
   post: IPost;
@@ -18,12 +19,28 @@ const FeedPost = ({post}: IFeedPost) => {
   const [isLiked, setIsLiked] = useState(false);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
-  const toggleDescriptionExpanded = () => {
-    setIsDescriptionExpanded(v => !v);
-  };
-
   const toggleLike = () => {
     setIsLiked(v => !v);
+  };
+
+  let content = null;
+  if (post.image) {
+    content = (
+      <DoublePressable onDoublePress={toggleLike}>
+        <Image
+          source={{
+            uri: post.image,
+          }}
+          style={styles.image}
+        />
+      </DoublePressable>
+    );
+  } else if (post.images) {
+    content = <Carousel images={post.images} onDoublePress={toggleLike} />;
+  }
+
+  const toggleDescriptionExpanded = () => {
+    setIsDescriptionExpanded(v => !v);
   };
 
   return (
@@ -42,14 +59,7 @@ const FeedPost = ({post}: IFeedPost) => {
           style={styles.threeDots}
         />
       </View>
-      <DoublePressable onDoublePress={toggleLike}>
-        <Image
-          source={{
-            uri: post.image,
-          }}
-          style={styles.image}
-        />
-      </DoublePressable>
+      {content}
 
       <View style={styles.footer}>
         <View style={styles.iconContainer}>
