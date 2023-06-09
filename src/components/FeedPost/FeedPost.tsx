@@ -4,21 +4,26 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
 import colors from '../../theme/colors';
-
+import Comment from '../Comment/Comment';
 import styles from './styles';
+import {IPost} from '../../types/models';
 
-const FeedPost = () => {
+interface IFeedPost {
+  post: IPost;
+}
+
+const FeedPost = ({post}: IFeedPost) => {
   const isLiked = true;
   return (
     <View style={styles.post}>
       <View style={styles.header}>
         <Image
           source={{
-            uri: 'https://reactnative.dev/docs/assets/p_cat1.png',
+            uri: post.user.image,
           }}
           style={styles.userAvatar}
         />
-        <Text style={styles.userName}>Cat</Text>
+        <Text style={styles.userName}>{post.user.username}</Text>
         <Entypo
           name="dots-three-horizontal"
           size={16}
@@ -27,7 +32,7 @@ const FeedPost = () => {
       </View>
       <Image
         source={{
-          uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
+          uri: post.image,
         }}
         style={styles.image}
       />
@@ -62,30 +67,20 @@ const FeedPost = () => {
 
         <Text style={styles.text}>
           Liked by <Text style={styles.bold}>dkbbhavya</Text> and{' '}
-          <Text style={styles.bold}>16 others</Text>
+          <Text style={styles.bold}>{post.nofLikes} others</Text>
         </Text>
 
         <Text style={styles.text}>
-          <Text style={styles.bold}>dkbbhavya</Text> Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Sequi tempore totam iure fuga commodi
-          impedit quasi reprehenderit atque suscipit aperiam, delectus
-          blanditiis assumenda perferendis. Corporis magni est vero hic qui.
+          <Text style={styles.bold}>{post.user.username}</Text>{' '}
+          {post.description}
         </Text>
 
-        <Text>View all 10 comments</Text>
-        <View style={styles.comment}>
-          <Text style={styles.commentText}>
-            <Text style={styles.bold}>dkbbhavya</Text> Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Sequi tempore totam iure fuga
-          </Text>
-          <AntDesign
-            name={isLiked ? 'heart' : 'hearto'}
-            style={styles.icon}
-            color={colors.black}
-          />
-        </View>
+        <Text>View all {post.nofComments} comments</Text>
+        {post.comments.map(comment => (
+          <Comment comment={comment} key={comment.id} />
+        ))}
 
-        <Text>12 June, 2023</Text>
+        <Text>{post.createdAt}</Text>
       </View>
     </View>
   );

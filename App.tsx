@@ -1,14 +1,18 @@
-import FeedPost from './src/components/FeedPost/FeedPost';
-import {ScrollView} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 
 const App = () => {
   return (
-    <ScrollView>
-      <FeedPost />
-      <FeedPost />
-      <FeedPost />
-    </ScrollView>
+    <View style={styles.app}>
+      <HomeScreen />
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  app: {
+    flex: 1,
+  },
+});
 
 export default App;

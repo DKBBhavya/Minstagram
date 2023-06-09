@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "createdAt": "11 June 2021",
+    "image": "https://picsum.photos/500/500",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi ipsam quod sed, dolore, sint aperiam officia repudiandae at, non maiores aspernatur consectetur? Explicabo delectus ab ipsam dignissimos, voluptatibus quos facere.",
+    "user": {
+      "image": "https://picsum.photos/500/500",
+      "username": "John Doe"
+    },
+    "nofComments": 123,
+    "nofLikes": 1234,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "Hello World",
+        "user": {
+          "username": "Jane Doe"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "Hello World",
+        "user": {
+          "username": "Jane Doe"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "createdAt": "15 June 2021",
+    "image": "https://picsum.photos/500/500",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi ipsam quod sed, dolore, sint aperiam officia repudiandae at, non maiores aspernatur consectetur? Explicabo delectus ab ipsam dignissimos, voluptatibus quos facere.",
+    "user": {
+      "image": "https://picsum.photos/500/500",
+      "username": "John Doe"
+    },
+    "nofComments": 123,
+    "nofLikes": 1234,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "Hello World",
+        "user": {
+          "username": "Jane Doe"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "Hello World",
+        "user": {
+          "username": "Jane Doe"
+        }
+      }
+    ]
+  }
+]
