@@ -2,7 +2,7 @@
   {
     "id": "1",
     "createdAt": "11 June 2021",
-    "image": "https://picsum.photos/500/500",
+    "video": "http://techslides.com/demos/sample-videos/small.mp4",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi ipsam quod sed, dolore, sint aperiam officia repudiandae at, non maiores aspernatur consectetur? Explicabo delectus ab ipsam dignissimos, voluptatibus quos facere.",
     "user": {
       "image": "https://picsum.photos/500/500",

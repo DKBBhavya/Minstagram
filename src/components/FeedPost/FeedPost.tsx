@@ -5,6 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
 import colors from '../../theme/colors';
 import Comment from '../Comment/Comment';
+import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import styles from './styles';
 import {IPost} from '../../types/models';
 import {useState} from 'react';
@@ -13,9 +14,10 @@ import Carousel from '../Carousel';
 
 interface IFeedPost {
   post: IPost;
+  isVisible: boolean;
 }
 
-const FeedPost = ({post}: IFeedPost) => {
+const FeedPost = ({post, isVisible}: IFeedPost) => {
   const [isLiked, setIsLiked] = useState(false);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
@@ -37,6 +39,12 @@ const FeedPost = ({post}: IFeedPost) => {
     );
   } else if (post.images) {
     content = <Carousel images={post.images} onDoublePress={toggleLike} />;
+  } else if (post.video) {
+    content = (
+      <DoublePressable onDoublePress={toggleLike}>
+        <VideoPlayer uri={post.video} paused={!isVisible} />
+      </DoublePressable>
+    );
   }
 
   const toggleDescriptionExpanded = () => {
