@@ -1,0 +1,29 @@
+[
+  {
+    "id": "c1",
+    "comment": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "user": {
+      "id": "u1",
+      "username": "Vladimir",
+      "image": "https://loremflickr.com/320/240?random=1"
+    }
+  },
+  {
+    "id": "c2",
+    "comment": "Donec auctor, nisl eu ultricies aliquam, nisl nisl lacinia nisl, eu lacinia nisl nisl eu nisl.",
+    "user": {
+      "id": "u1",
+      "username": "Vladimir",
+      "image": "https://loremflickr.com/320/240?random=1"
+    }
+  },
+  {
+    "id": "c3",
+    "comment": "Donec auctor, nisl eu ultricies aliquam, nisl nisl lacinia nisl, eu lacinia nisl nisl eu nisl.",
+    "user": {
+      "id": "u1",
+      "username": "Vladimir",
+      "image": "https://loremflickr.com/320/240?random=1"
+    }
+  }
+]
