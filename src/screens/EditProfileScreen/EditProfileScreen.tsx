@@ -3,7 +3,9 @@ import user from '../../assets/data/user.json';
 import colors from '../../theme/colors';
 import fonts from '../../theme/fonts';
 import {useForm, Controller, Control} from 'react-hook-form';
+import {Asset, launchImageLibrary} from 'react-native-image-picker';
 import {IUser} from '../../types/models';
+import {useState} from 'react';
 
 const URL_REGEX =
   /[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)$/i;
@@ -59,6 +61,7 @@ const CustomInput = ({
 );
 
 const EditProfileScreen = () => {
+  const [selectedPhoto, setSelectedPhoto] = useState<null | Asset>(null);
   const {control, handleSubmit} = useForm<IEditableUser>({
     defaultValues: {
       name: user.name,
@@ -72,10 +75,26 @@ const EditProfileScreen = () => {
     console.log('submit', data);
   };
 
+  const onChangePhoto = () => {
+    launchImageLibrary(
+      {mediaType: 'photo'},
+      ({didCancel, errorCode, assets}) => {
+        if (!didCancel && !errorCode && assets && assets.length > 0) {
+          setSelectedPhoto(assets[0]);
+        }
+      },
+    );
+  };
+
   return (
     <View style={styles.page}>
-      <Image source={{uri: user.image}} style={styles.avatar} />
-      <Text style={styles.textButton}>Change profile photo</Text>
+      <Image
+        source={{uri: selectedPhoto?.uri || user.image}}
+        style={styles.avatar}
+      />
+      <Text onPress={onChangePhoto} style={styles.textButton}>
+        Change profile photo
+      </Text>
 
       <CustomInput
         rules={{required: 'Name is required'}}
