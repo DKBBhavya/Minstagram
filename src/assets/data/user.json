@@ -1,0 +1,125 @@
+{
+  "id": "u1",
+  "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png",
+  "name": "Vadim Savin",
+  "username": "Vadim",
+  "bio": "I will be the semicolons to your code",
+  "posts": [
+    {
+      "id": "1",
+      "createdAt": "19 May 2023",
+      "images": [
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg"
+      ],
+      "description": "It's amazing to see all these talented people using my UI kit"
+    },
+    {
+      "id": "2",
+      "createdAt": "19 May 2023",
+      "images": [
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/5.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/6.jpg"
+      ],
+      "description": "After all this time, I'm still into you."
+    },
+    {
+      "id": "3",
+      "createdAt": "19 May 2023",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+      "description": "There's no way you can miss this!"
+    },
+    {
+      "id": "4",
+      "createdAt": "19 May 2023",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg",
+      "description": "There's no way you can miss this!"
+    },
+    {
+      "id": "5",
+      "createdAt": "19 May 2023",
+      "images": [
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg"
+      ],
+      "description": "It's amazing to see all these talented people using my UI kit"
+    },
+    {
+      "id": "6",
+      "createdAt": "19 May 2023",
+      "images": [
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/5.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/6.jpg"
+      ],
+      "description": "After all this time, I'm still into you."
+    },
+    {
+      "id": "7",
+      "createdAt": "19 May 2023",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+      "description": "There's no way you can miss this!"
+    },
+    {
+      "id": "8",
+      "createdAt": "19 May 2023",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg",
+      "description": "There's no way you can miss this!"
+    },
+    {
+      "id": "9",
+      "createdAt": "19 May 2023",
+      "images": [
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg"
+      ],
+      "description": "It's amazing to see all these talented people using my UI kit"
+    },
+    {
+      "id": "10",
+      "createdAt": "19 May 2023",
+      "images": [
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/5.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/6.jpg"
+      ],
+      "description": "After all this time, I'm still into you."
+    },
+    {
+      "id": "11",
+      "createdAt": "19 May 2023",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+      "description": "There's no way you can miss this!"
+    },
+    {
+      "id": "12",
+      "createdAt": "19 May 2023",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg",
+      "description": "There's no way you can miss this!"
+    },
+    {
+      "id": "13",
+      "createdAt": "19 May 2023",
+      "images": [
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg"
+      ],
+      "description": "It's amazing to see all these talented people using my UI kit"
+    },
+    {
+      "id": "14",
+      "createdAt": "19 May 2023",
+      "images": [
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/5.jpg",
+        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/6.jpg"
+      ],
+      "description": "After all this time, I'm still into you."
+    }
+  ]
+}
