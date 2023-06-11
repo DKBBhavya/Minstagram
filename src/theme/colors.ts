@@ -4,6 +4,7 @@ const colors = {
   accent: '#E04956',
 
   border: '#dcdcdc',
+  error: '#E04956',
 
   white: '#fff',
   black: '#000',
