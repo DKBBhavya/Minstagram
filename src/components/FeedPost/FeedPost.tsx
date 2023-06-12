@@ -12,6 +12,7 @@ import {useState} from 'react';
 import DoublePressable from '../DoublePressable';
 import Carousel from '../Carousel';
 import {useNavigation} from '@react-navigation/native';
+import {FeedNavigationProp} from '../../navigation/types';
 
 interface IFeedPost {
   post: IPost;
@@ -21,7 +22,7 @@ interface IFeedPost {
 const FeedPost = ({post, isVisible}: IFeedPost) => {
   const [isLiked, setIsLiked] = useState(false);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
-  const navigation = useNavigation();
+  const navigation = useNavigation<FeedNavigationProp>();
 
   const navigateToUser = () => {
     navigation.navigate('UserProfile', {userId: post.user.username});
