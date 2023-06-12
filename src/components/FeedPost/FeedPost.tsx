@@ -11,6 +11,7 @@ import {IPost} from '../../types/models';
 import {useState} from 'react';
 import DoublePressable from '../DoublePressable';
 import Carousel from '../Carousel';
+import {useNavigation} from '@react-navigation/native';
 
 interface IFeedPost {
   post: IPost;
@@ -20,6 +21,11 @@ interface IFeedPost {
 const FeedPost = ({post, isVisible}: IFeedPost) => {
   const [isLiked, setIsLiked] = useState(false);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+  const navigation = useNavigation();
+
+  const navigateToUser = () => {
+    navigation.navigate('UserProfile', {userId: post.user.username});
+  };
 
   const toggleLike = () => {
     setIsLiked(v => !v);
@@ -60,7 +66,9 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
           }}
           style={styles.userAvatar}
         />
-        <Text style={styles.userName}>{post.user.username}</Text>
+        <Text style={styles.userName} onPress={navigateToUser}>
+          {post.user.username}
+        </Text>
         <Entypo
           name="dots-three-horizontal"
           size={16}
