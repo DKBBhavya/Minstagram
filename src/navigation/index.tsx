@@ -2,22 +2,25 @@ import {NavigationContainer} from '@react-navigation/native';
 import ProfileScreen from '../screens/ProfileScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
-import {Image} from 'react-native';
-import logo from '../assets/images/logo.png';
+import BottomTabNavigator from './BottomTabNavigator';
 
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => (
   <NavigationContainer>
     <Stack.Navigator
-      initialRouteName="Feed"
+      initialRouteName="Home"
       screenOptions={{headerShown: true}}>
+      <Stack.Screen
+        name="Home"
+        component={BottomTabNavigator}
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         name="Feed"
         component={HomeScreen}
         options={{
-          headerTitle: HeaderTitle,
-          headerTitleAlign: 'center',
+          headerShown: false,
         }}
       />
       <Stack.Screen
@@ -28,15 +31,5 @@ const Navigation = () => (
     </Stack.Navigator>
   </NavigationContainer>
 );
-
-const HeaderTitle = () => {
-  return (
-    <Image
-      source={logo}
-      resizeMode="contain"
-      style={{width: 150, height: 40}}
-    />
-  );
-};
 
 export default Navigation;
