@@ -27,6 +27,10 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
     navigation.navigate('UserProfile', {userId: post.user.username});
   };
 
+  const navigateToComments = () => {
+    navigation.navigate('Comments', {postId: post.id});
+  };
+
   const toggleLike = () => {
     setIsLiked(v => !v);
   };
@@ -120,7 +124,9 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
           {isDescriptionExpanded ? 'less' : 'more'}
         </Text>
 
-        <Text>View all {post.nofComments} comments</Text>
+        <Text onPress={navigateToComments}>
+          View all {post.nofComments} comments
+        </Text>
         {post.comments.map(comment => (
           <Comment comment={comment} key={comment.id} />
         ))}
